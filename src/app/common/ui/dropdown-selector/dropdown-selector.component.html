@@ -1,0 +1,26 @@
+<div class="dropdown-selector" (clickOutside)="isExpanded = false" (click)="expand()" [class.open]="isExpanded">
+  <div class="disabled" *ngIf="disabled"></div>
+  <h4 class="placeholder-text" [class.dropdown-item-text]="selectedItem">
+    {{ selectedItem?.name ?? placeholder }}
+  </h4>
+  <div class="icons">
+    <img class="x-mark"
+    (click)="clear()"
+    *ngIf="selectedItem"
+    src="\app\common\shared\assets\icons\xmark-solid.svg"
+  />
+  <img
+    src="\app\common\shared\assets\icons\chevron-down-solid.svg"
+    [class.animate]="isExpanded"
+  />
+  </div>
+  <div class="dropdown-list" [class.visible]="isExpanded">
+    <div
+      class="dropdown-item"
+      *ngFor="let item of items"
+      (click)="selectItem(item)"
+      [class.selected]="selectedItem === item">
+      <p class="dropdown-item-text">{{ item.name }}</p>
+    </div>
+  </div>
+</div>

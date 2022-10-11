@@ -1,0 +1,391 @@
+@import "../../common/shared/styles/common.scss";
+
+.container {
+  width: 100%;
+  margin: auto;
+  font-family: "Nunito";
+}
+
+.recipe-image {
+  margin-top: 2rem;
+  width: calc(70% - 2rem);
+  margin: 1rem auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 20%);
+  height: 40vh;
+  overflow: hidden;
+  img {
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    flex-shrink: 0;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $dark-text-color;
+  margin-bottom: 1rem;
+}
+
+.recipe-description {
+  width: 70%;
+  margin: 1rem;
+  p {
+    width: 80%;
+    color: $dark-light-text-color;
+    font-family: "Ubuntu";
+    line-height: 1.5rem;
+  }
+}
+
+.recipe-info {
+  width: 30%;
+  margin: 1rem;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
+}
+
+.recipe-info-item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  &:not(:last-child):after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 2rem);
+    background-color: lightgray;
+    border-radius: 5px;
+    height: 1.5px;
+    bottom: 0px;
+  }
+}
+
+.recipe-info-item-name {
+  width: 70%;
+  display: flex;
+  color: $dark-text-color;
+  p {
+    margin-left: 1rem;
+  }
+}
+
+.recipe-info-item-value {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  color: $dark-text-color;
+}
+
+.ingredients-and-nutritions {
+  display: flex;
+  width: 70%;
+  margin: 1rem auto auto auto;
+  align-items: flex-start;
+}
+
+.ingredients, .nutritions {
+  width: 50%;
+  margin: 1rem;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
+  .title {
+    margin-left: 1rem;
+  }
+}
+
+.ingredient-item {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+}
+
+.ingredient-name {
+  width: 70%;
+  display: flex;
+  color: $dark-text-color;
+  p {
+    margin-left: 1rem;
+  }
+}
+
+.ingredient-value {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  color: $dark-text-color;
+}
+
+.nutrition-item {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  &:nth-child(2n) {
+    .nutrition-name {
+      background-color: white;
+    }
+    .nutrition-column {
+      background-color: white;
+    }
+  }
+}
+
+.nutrition-name {
+  width: 33.33%;
+  padding: 0.5rem;
+  background-color: rgb(233, 227, 227);
+}
+.nutrition-column {
+  margin-left: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: 33.33%;
+  background-color: rgb(233, 227, 227);
+}
+
+.section {
+  width: 70%;
+  margin: 1rem auto auto auto;
+}
+
+.double-section {
+  display: flex;
+  justify-content: center;
+}
+
+.steps {
+  border-radius: 5px;
+  padding: 3rem;
+  margin: 1rem;
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
+}
+
+.step-item {
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.step-description {
+  width: 90%;
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $dark-text-color;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: $dark-light-text-color;
+    font-family: "Ubuntu";
+    line-height: 1.5rem;
+    width: 90%;
+  }
+}
+
+.step-image {
+  width: 10%;
+}
+
+.image {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tags {
+  padding: 3rem;
+  padding-bottom: 1rem;
+  margin: auto;
+}
+
+.tags-list {
+  display: flex;
+  margin-left: 4rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: .2rem;
+  margin: .3rem;
+  background-color: $tag-color;
+  p {
+    padding: .3rem 1rem .3rem 1rem;
+    font-size: .8rem;
+  }
+}
+
+.comments {
+  padding: 1rem 3rem 1rem 3rem;
+  margin: auto;
+  width: 100%;
+}
+
+.comment-item {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin-top: 1rem;
+  align-items: center;
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
+}
+
+.commentator {
+  width: 100%;
+  padding: 2rem 0rem 0rem 2rem;
+  display: flex;
+  align-items: center;
+  .user-image {
+    width: 4%;
+    border-radius: 50%;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+  }
+  p {
+    font-size: .8rem;
+    margin-left: 1rem;
+    margin-top: .25rem;
+  }
+  .commentator-info {
+    display: flex;
+    flex-wrap: wrap;
+    .rating {
+      margin-top: .2rem;
+      width: 100%;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.comment {
+  width: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+  p {
+    color: $dark-text-color;
+    font-family: "Ubuntu";
+    line-height: 1.5rem;
+  }
+}
+
+.more-reviews {
+  width: 100%;
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.fitting-image {
+    min-height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+}
+
+.share, .review {
+  padding: 1rem 3rem 1rem 3rem;
+  margin: 1rem;
+  width: 50%;
+}
+
+.title {
+  display: flex;
+  span {
+    font-size: 2rem;
+    color: $dark-text-color;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-left: 1rem;
+    line-height: 2.5rem;
+  }
+}
+
+.socials {
+  display: flex;
+  margin: 1rem;
+  margin-left: 1.5rem;
+  .social {
+    padding: .7rem;
+    margin-left: .7rem;
+    display: flex;
+    span {
+      font-size: 1rem;
+      color: white;
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 1000;
+      color: white;
+      margin-right: .5rem;
+    }
+  }
+  .facebook {
+    background-color: $facebook-color;
+  }
+  .instagram {
+    background-color: $instagram-color;
+  }
+  .twitter {
+    background-color:$twitter-color;
+  }
+}
+
+.comment-and-review {
+  margin-left: 1rem;
+  .rating {
+    margin: .5rem 1rem 0rem 1rem;
+    span {
+      font-size: 1.4rem;
+      margin-left: .2rem;
+    }
+  }
+}
+
+.submit {
+  width: 30%;
+  margin-left: 1rem;
+}
+
+.recipes {
+  padding: 1rem 3rem 1rem 3rem;
+  margin: auto;
+  width: 100%;
+}
+
+.recipes-items {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recipe-item {
+  width: 50%;
+  padding: 1rem;
+  height: 35vh;
+}
+
+@media screen and (min-width: 1000px) {
+  .recipe-item {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1410px) {
+  .recipe-item {
+    width: 25%;
+  }
+}
+

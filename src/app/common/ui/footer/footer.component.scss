@@ -1,0 +1,71 @@
+@import "../../shared/styles/common.scss";
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background-color: $footer-background-color;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navigation {
+  display: block;
+}
+
+h2 {
+  font-family: "Poppins-Light";
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: $dark-text-color;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: auto;
+  li {
+    margin-left: 1rem;
+    font-family: "Poppins-Light";
+    font-size: 1rem;
+    font-weight: 70;
+    transition: 0.2s;
+    position: relative;
+    color: $dark-text-color;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      background-color: $light-text-color;
+      border-radius: 5px;
+      height: 1.5px;
+      bottom: -1px;
+      left: 50%;
+      transition: 0.3s;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $dark-light-text-color;
+    }
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+span {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  color: $dark-text-color;
+  transition: 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: $dark-light-text-color;
+  }
+}

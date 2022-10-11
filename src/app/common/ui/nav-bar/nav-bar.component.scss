@@ -1,0 +1,82 @@
+@import "../../shared/styles/common.scss";
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: $nav-background-color;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  a {
+    font-family:'Damion';
+    margin-left: 5rem;
+    margin-right: 2rem;
+    font-weight: 50;
+    font-size: 3rem;
+    color: $light-text-color;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  li {
+    a {
+      color: $light-text-color;
+      font-family: 'Poppins-Light';
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      padding-top: 1rem;
+      position: relative;
+      &:after{
+          content: "";
+          position: absolute;
+          width: 0;
+          background-color: $light-text-color;
+          border-radius: 5px;
+          height: 3px;
+          bottom: -4px;
+          left: 50%;
+          transition: 0.3s;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+      &.active:after {
+        width: 100%;
+        left: 0;
+        background-color: $tag-color;
+      }
+    }
+  }
+}
+
+
+.utils {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  span {
+    display: flex;
+    align-items: center;
+    color: #e3e2de;
+    font-size: 1.5rem;
+    padding: .5rem;
+  }
+}
+

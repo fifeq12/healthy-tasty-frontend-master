@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="filter-bar">
+    <div class="category-filter">
+      <app-dropdown-selector
+        placeholder="Select category..."
+        [items]="categories"
+        [(selectedItem)]="selectedCategory"
+        (cleared)="clear()"
+      ></app-dropdown-selector>
+      <app-dropdown-selector
+        [disabled]="selectedCategory == null"
+        class="dropdown-selector"
+        placeholder="Select type..."
+        [items]="types"
+        [(selectedItem)]="selectedType"
+      ></app-dropdown-selector>
+    </div>
+    <div class="checkbox-filter">
+      <div class="checkbox-option">
+        <h4>With meat:</h4>
+        <input type="checkbox" />
+      </div>
+      <div class="checkbox-option">
+        <h4>Vegetarian:</h4>
+        <input type="checkbox" />
+      </div>
+      <div class="checkbox-option">
+        <h4>Vegan:</h4>
+        <input type="checkbox" />
+      </div>
+    </div>
+    <div class="sort-and-search">
+      <input type="text" placeholder="Search..." />
+      <h4>Sort by:</h4>
+      <select>
+        <option>Date</option>
+        <option>Popularity</option>
+        <option>Preparation time</option>
+      </select>
+    </div>
+  </div>
+  <div class="recipes-section">
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+    <div class="recipe-item">
+      <app-recipe-item></app-recipe-item>
+    </div>
+  </div>
+  <div class="pagination"></div>
+</div>

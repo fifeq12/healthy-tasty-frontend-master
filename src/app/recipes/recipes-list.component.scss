@@ -1,0 +1,92 @@
+@import "../common/shared/styles/common.scss";
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.filter-bar {
+  width: 100%;
+  height: 8vh;
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  color: $dark-text-color;
+  h4 {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-family: "Nunito";
+  }
+  .category-filter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .dropdown-selector {
+      margin-left: 1rem;
+    }
+  }
+  .checkbox-filter {
+    width: 25%;
+    display: flex;
+    height: auto;
+    align-items: center;
+  }
+
+  .checkbox-option {
+    display: flex;
+    height: 40%;
+    h4 {
+      font-size: 1rem;
+    }
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .sort-and-search {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    input {
+      height: 60%;
+      border-radius: 5px;
+      margin-left: 1rem;
+      width: 40%;
+      padding-left: 1rem;
+    }
+    select {
+      height: 70%;
+      border-radius: 5px;
+      margin-left: 1rem;
+      width: 20%;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.recipes-section {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  .recipe-item {
+    width: 50%;
+    padding: 1rem;
+    height: 35vh;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .recipe-item {
+      width: 33.33%;
+    }
+  }
+
+  @media screen and (min-width: 1410px) {
+    .recipe-item {
+      width: 25%;
+    }
+  }
+}
